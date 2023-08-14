@@ -7,10 +7,10 @@ NÃO POSSUI idade para tirar carteira, ainda falta(m) X anos.
 */
 
 // Solicitação do nome completo
-let nomeCompleto = prompt("Digite seu nome completo:");
+nomeCompleto = prompt("Digite seu nome completo:");
 
 // Solicitação da idade
-let idade = parseInt(prompt("Digite sua idade:"));
+idade = parseInt(prompt("Digite sua idade:"));
 
 // Verifica se o usuário possui idade para tirar carteira de motorista
 if (idade >= 18) {
