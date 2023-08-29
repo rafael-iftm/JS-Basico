@@ -8,13 +8,13 @@
 
     const frutas = [
         "maçã", "banana", "laranja", "uva", "morango",
-        "pera", "manga", "kiwi", "abacate", "pêssego",
+        "pera", "manga", "moranga", "mexerica", "kiwi", "abacate", "pêssego",
         "abacaxi", "mamão", "melancia", "amora", "framboesa",
         "cereja", "limão", "caju", "maracujá", "ameixa"
     ];
     
     const verduras = [
-        "alface", "cenoura", "brócolis", "abobrinha", "espinafre", "cebola",
+        "alho", "alface", "cenoura", "batata", "brócolis", "abobrinha", "espinafre", "cebola",
         "couve", "rúcula", "chicória", "almeirão", "repolho",
         "couve-flor", "beterraba", "nabo", "acelga", "agrião",
         "salsinha", "coentro", "hortelã", "radicchio"
