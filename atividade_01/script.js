@@ -43,9 +43,16 @@
         }
     }
     
-    document.write("<p>Frase: " + frase + "</p>");
-    document.write("<p>Total de frutas: " + totalFrutas + "</p>");
+    document.write("<p>Frase: <br>" + frase + "</p>");
+    document.write("_________________________________________________________________________________________________________________________________________________________________________");
+    document.write("<p>Banco de frutas: <br>" + frutas.sort().join(", ") + "</p>");
+    document.write("<p>Banco de verduras: <br>" + verduras.sort().join(", ") + "</p>");
+    document.write("_________________________________________________________________________________________________________________________________________________________________________");
+
+    document.write("<h3>Total de frutas: " + totalFrutas + "</h3>");
     document.write("<p>Frutas encontradas: " + frutasEncontradas.join(", ") + "</p>");
-    document.write("<p>Total de verduras: " + totalVerduras + "</p>");
+    document.write("<h3>Total de verduras: " + totalVerduras + "</h3>");
     document.write("<p>Verduras encontradas: " + verdurasEncontradas.join(", ") + "</p>");
+
+
     
