@@ -22,7 +22,8 @@ const verduras = [
 ];
 
 const frase = prompt("Digite uma frase:");
-const fraseSemPontuacao = frase.replace(/[^\w\s]/gi, '');
+const fraseSemAspas = frase.replace(/["'“”‘’]/g, ''); // Remove as aspas da frase
+const fraseSemPontuacao = fraseSemAspas.replace(/[^\w\s]/gi, '');
 const palavras = fraseSemPontuacao.split(" ");
 console.log(palavras);
 
@@ -48,7 +49,7 @@ for (const palavra of palavras) {
 const totalPalavrasAnalisadas = palavras.length;
 
 // Dividindo a frase em frases individuais (assumindo separação por ., ! ou ?)
-const frases = frase.split(/[.!?]/).filter(frase => frase.trim() !== '');
+const frases = fraseSemAspas.split(/[.!?]/).filter(frase => frase.trim() !== '');
 
 // Contagem do número total de frases
 const totalFrases = frases.length;
