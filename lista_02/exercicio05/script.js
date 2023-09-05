@@ -2,7 +2,7 @@
 Construa uma página web capaz de solicitar do usuário um texto qualquer e, em seguida,
 informar através de uma mensagem de alerta a quantidade de palavras contidas no texto.
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
 */
 
 // Solicita um texto ao usuário usando prompt().

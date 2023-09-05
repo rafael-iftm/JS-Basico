@@ -3,7 +3,7 @@ Construa uma página web capaz de solicitar um texto e informar no corpo do docu
 concatenação da primeira com a última palavra do texto (deve haver um espaço entre as
 palavras).
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
 */
 
 

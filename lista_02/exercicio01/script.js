@@ -28,7 +28,7 @@ aplicação da cor no nome completo deverá obedecer a seguinte sequência: 1o n
 PRETO, 2o nome – COR INFORMADA PELO USUÁRIO, 3o nome – PRETO, 4o nome
 - COR INFORMADA PELO USUÁRIO, e assim sucessivamente.
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
  */
 
 // Solicita a quantidade de vezes que o nome completo será exibido.

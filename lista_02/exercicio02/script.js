@@ -3,7 +3,7 @@ Construa uma página web capaz de solicitar o nome completo do usuário e, em se
 escrever no corpo do documento o nome informado e a quantidade de caracteres presentes no
 texto.
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
  */
 
 // Solicita o nome completo do usuário usando prompt().

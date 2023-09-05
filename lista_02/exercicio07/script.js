@@ -3,7 +3,7 @@ Construa uma página web capaz de solicitar um texto e uma letra e informar no c
 documento apenas as palavras iniciadas com a letra informada (deve haver um espaço entre
 as palavras).
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
 */
 
 // Solicita um texto ao usuário usando prompt().

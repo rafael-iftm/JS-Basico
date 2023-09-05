@@ -3,7 +3,7 @@
     - o total de frutas contidas no texto e as frutas encontradas logo abaixo
     - o total de verdutas contidas no texto e as verduras encontradas logo abaixo
 
-    Utilize somente prompt() e write()
+    Utilize prompt() e write()
 */
 
 

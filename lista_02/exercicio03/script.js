@@ -3,7 +3,7 @@ Construa uma página web capaz de solicitar o nome completo do usuário e, em se
 exibir através de uma mensagem de alerta o nome informado contendo apenas letras
 maiúsculas.
 
-Utilize somente prompt() e write()
+Utilize prompt() e write()
 */
 
 // Solicita o nome completo do usuário usando prompt().

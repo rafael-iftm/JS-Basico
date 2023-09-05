@@ -1,0 +1,4 @@
+/* Estilo CSS para adicionar sombra à imagem */
+img#dadoImg {
+    box-shadow: 5px 5px 10px #888888;
+}
