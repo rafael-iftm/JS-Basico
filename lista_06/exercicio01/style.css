@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+img {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+p {
+    font-size: 18px;
+}
+
+.animate-happy {
+    animation: moveLeftRight 0.5s linear infinite alternate;
+}
+
+.animate-nervous {
+    animation: shake 0.2s ease-in-out infinite;
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
