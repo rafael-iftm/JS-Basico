@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio 04</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Formatação de Texto</h1>
+
+    <form>
+        <label for="texto">Digite um texto:</label>
+        <input type="text" id="texto" name="texto" required><br><br>
+
+        <label for="formato">Escolha a formatação:</label>
+        <select id="formato" name="formato" required>
+            <option value="italic">Itálico</option>
+            <option value="bold">Negrito</option>
+            <option value="underline">Sublinhado</option>
+        </select><br><br>
+
+        <input type="button" value="Aplicar Formatação" onclick="formatarTexto()">
+    </form>
+
+    <div id="resultado"></div>
+</body>
+</html>
