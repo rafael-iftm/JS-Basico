@@ -73,7 +73,7 @@ function exibirCandidatos() {
     
     const vencedorNome = candidatos.reduce((prev, current) => (prev.porcentagem > current.porcentagem) ? prev : current).nome;
 
-    vencedor.textContent = 'Candidato(a) vencedor(a): ' + vencedorNome + ' (' + candidatos.find(c => c.nome === vencedorNome).porcentagem.toFixed(1) + '%)';
+    vencedor.textContent = vencedorNome + ' (' + candidatos.find(c => c.nome === vencedorNome).porcentagem.toFixed(1) + '%)';
 
     candidatos.forEach(candidato => {
         const candidatoDiv = document.createElement('div');
