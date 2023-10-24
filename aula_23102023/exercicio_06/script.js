@@ -18,10 +18,10 @@ window.addEventListener("load", function () {
         document.getElementById("numero").innerHTML = random;
     }
 
-    function controlarBtn(disabledPlay, disabledPause=true) {
+    function controlarBtn(disabledPlay, disabledPause) {
         document.getElementById("btnPlay").disabled = disabledPlay;
         document.getElementById("btnPause").disabled = disabledPause;
     }
 
-    controlarBtn()
+    controlarBtn(false, true)
 });
