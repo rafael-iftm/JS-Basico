@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo de Números Pares</title>
+</head>
+<body>
+    <header>
+        <div>
+            <label for="level">Nível:</label>
+            <select id="level" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="easy">Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select>
+        </div>
+        <div>
+            <label for="timer">Tempo:</label>
+            <span id="timer">00:00</span>
+        </div>
+        <div>
+            <button id="start">Iniciar</button>
+            <button id="pause">Pausar</button>
+            <button id="stop">Parar</button>
+        </div>
+    </header>
+    <main>
+        <div id="message">Clique em Iniciar para começar.</div>
+        <div id="random-number"></div>
+    </main>
+    <footer>
+        <div>
+            Acertos: <span id="correct-count">0 (0%)</span>
+        </div>
+        <div>
+            Erros: <span id="wrong-count">0</span>
+        </div>
+        <div>
+            Números Pares Sorteados: <span id="even-count">0</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
