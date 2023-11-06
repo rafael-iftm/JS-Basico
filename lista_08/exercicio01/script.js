@@ -19,43 +19,35 @@ document.addEventListener("DOMContentLoaded", function() {
         easy: 105,
         medium: 75,
         hard: 30,
-        default: 0,
+    };
+
+    const levelTimeToChangeNumber = {
+        easy: 1000,
+        medium: 750,
+        hard: 500,
     };
 
     let remainingTime = 0;
     let correctCount = 0;
     let wrongCount = 0;
     let evenCount = 0;
-    let isNumberClicked = false;
 
     levelSelect.addEventListener("change", function() {
         if (!isGameRunning) {
             level = levelSelect.value;
-            setTimeToChangeNumber();
             setTimerDuration();
+            setTimeToChangeNumber();
         } else {
             levelSelect.value = level;
         }
     });
 
-    function setTimeToChangeNumber() {
-        switch (level) {
-            case "easy":
-                timeToChangeNumber = 1000;
-                break;
-            case "medium":
-                timeToChangeNumber = 750;
-                break;
-            case "hard":
-                timeToChangeNumber = 500;
-                break;
-            default:
-                timeToChangeNumber = 1000;
-        }
-    }
-
     function setTimerDuration() {
         timerDisplay.textContent = formatTime(levelTimes[level]);
+    }
+
+    function setTimeToChangeNumber() {
+        timeToChangeNumber = levelTimeToChangeNumber[level];
     }
 
     startButton.addEventListener("click", function() {
@@ -64,15 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             if (!isGameRunning) {
                 isGameRunning = true;
-                setTimeToChangeNumber();
                 setTimerDuration();
+                setTimeToChangeNumber();
                 startTimer();
                 startButton.disabled = true;
                 pauseButton.disabled = false;
                 stopButton.disabled = false;
                 messageDisplay.textContent = "Clique no número par!";
                 remainingTime = levelTimes[level];
-                generateRandomNumber();
             }
         }
     });
@@ -86,25 +77,17 @@ document.addEventListener("DOMContentLoaded", function() {
         pauseButton.disabled = true;
         stopButton.disabled = true;
         messageDisplay.textContent = "Clique em Iniciar para começar.";
-    
         levelSelect.value = "";
-        level = "default"; 
-        setTimeToChangeNumber();
-        setTimerDuration();
         correctCount = 0;
         wrongCount = 0;
-        evenCount = 0; 
-        correctCountDisplay.textContent = "0 (0%)"; 
-        wrongCountDisplay.textContent = "0"; 
-        evenCountDisplay.textContent = "0"; 
-    
-        
+        evenCount = 0;
+        correctCountDisplay.textContent = "0 (0%)";
+        wrongCountDisplay.textContent = "0";
+        evenCountDisplay.textContent = "0";
         timerDisplay.textContent = formatTime(levelTimes[level]);
         randomNumberDisplay.textContent = "";
         remainingTime = 0;
-        isNumberClicked = false;
     });
-    
 
     function startTimer() {
         timer = setInterval(function() {
@@ -114,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 stopGame();
             }
             generateRandomNumber();
-        }, 1000);
+        }, timeToChangeNumber);
     }
 
     function pauseTimer() {
@@ -128,8 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     randomNumberDisplay.addEventListener("click", function() {
         if (isGameRunning) {
             const randomNumber = parseInt(randomNumberDisplay.textContent);
-            isNumberClicked = false;
-    
+
             if (randomNumber % 2 === 0) {
                 randomNumberDisplay.style.color = 'green';
                 correctCount++;
@@ -137,29 +119,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 randomNumberDisplay.style.color = 'red';
                 wrongCount++;
             }
-    
-            correctCountDisplay.textContent = `${correctCount} (${((correctCount / (correctCount + wrongCount)) * 100).toFixed(0)}%)`;
+
+            const percentage = evenCount === 0 ? 0 : ((correctCount / evenCount) * 100).toFixed(0);
+            correctCountDisplay.textContent = `${correctCount} (${percentage}%)`;
             wrongCountDisplay.textContent = wrongCount;
         }
     });
-    
 
     function generateRandomNumber() {
         if (isGameRunning) {
             const randomNumber = Math.floor(Math.random() * 100);
             randomNumberDisplay.textContent = randomNumber;
             randomNumberDisplay.style.color = 'black';
-        
-            if (randomNumber % 2 === 0) {
-                evenCount++;
-            }
+
+            evenCount++;
             evenCountDisplay.textContent = evenCount;
-        
-            const percentage = evenCount === 0 ? 0 : ((correctCount / evenCount) * 100).toFixed(0);
-            correctCountDisplay.textContent = `${correctCount} (${percentage}%)`;
         }
     }
-    
+
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
@@ -177,6 +154,5 @@ document.addEventListener("DOMContentLoaded", function() {
         timerDisplay.textContent = formatTime(levelTimes[level]);
         randomNumberDisplay.textContent = "";
         remainingTime = 0;
-        isNumberClicked = false;
     }
 });
