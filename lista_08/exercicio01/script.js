@@ -131,9 +131,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const randomNumber = Math.floor(Math.random() * 100);
             randomNumberDisplay.textContent = randomNumber;
             randomNumberDisplay.style.color = 'black';
-
-            evenCount++;
-            evenCountDisplay.textContent = evenCount;
+            if (randomNumber % 2 === 0) {
+                evenCount++;
+                evenCountDisplay.textContent = evenCount;
+            }
         }
     }
 
