@@ -1,0 +1,12 @@
+.classeGenericaSucesso {
+    background-color: #E2FFE1;
+    color: #333333;
+    border: green 1px solid;
+    padding: 3px;
+}
+
+.classeGenericaErro {
+    background-color: #FFF4F4;
+    border: #FF6666 1px solid;
+    padding: 3px;
+}
