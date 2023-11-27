@@ -15,8 +15,9 @@ header {
     padding: 10px 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
 }
-
 
 footer {
     position: fixed;
