@@ -14,11 +14,15 @@ function submitForm() {
             alert('Usuário já cadastrado. Por favor, faça o login.');
             window.location.href = '../login/index.html';
         } else {
-            const newUser = { username, password };
-            users.push(newUser);
-            localStorage.setItem('users', JSON.stringify(users));
-            alert('Cadastro realizado com sucesso! Por favor, faça o login.');
-            window.location.href = '../login/index.html';
+            if (password === confirmPassword) {
+                const newUser = { username, password };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Cadastro realizado com sucesso! Por favor, faça o login.');
+                window.location.href = '../login/index.html';
+            } else {
+                alert('As senhas não coincidem. Por favor, verifique.');
+            }
         }
     } else {
         if (!usernameRegex.test(username)) {
