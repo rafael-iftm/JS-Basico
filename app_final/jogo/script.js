@@ -119,9 +119,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 randomNumberDisplay.style.color = 'red';
                 wrongCount++;
             }
-
-            const percentage = evenCount === 0 ? 0 : ((correctCount / evenCount) * 100).toFixed(0);
-            correctCountDisplay.textContent = `${correctCount} (${percentage}%)`;
             wrongCountDisplay.textContent = wrongCount;
         }
     });
@@ -135,6 +132,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 evenCount++;
                 evenCountDisplay.textContent = evenCount;
             }
+            const percentage = evenCount === 0 ? 0 : ((correctCount / evenCount) * 100).toFixed(0);
+            correctCountDisplay.textContent = `${correctCount} (${percentage}%)`;
         }
     }
 
