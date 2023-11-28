@@ -8,6 +8,7 @@ window.addEventListener("load", function () {
         box.style.display = "flex";
         box.style.flexDirection = "row"
         box.style.flexWrap = "wrap"
+        box.style.margin = "10px"
 
         // Criar a tag de div
         var div = document.createElement("div");
@@ -16,7 +17,12 @@ window.addEventListener("load", function () {
         // Criar a tag de imagem
         var img = document.createElement("img");
         img.setAttribute("src", "img/tita-colossal.png");
+        img.setAttribute("name", nome);
         img.style.width = "50%"
+
+        img.addEventListener("click", function (event) {
+            exibirMsg(event.target.getAttribute("name"));
+        });
 
         // Criar um parágrafo para exibir o nome
         var p = document.createElement("p");
@@ -29,4 +35,8 @@ window.addEventListener("load", function () {
         // Adicionar a div ao elemento com o ID "box"
         document.getElementById("box").appendChild(div);
     });
+
+    function exibirMsg(nome) {
+        alert(nome);
+    }
 });
