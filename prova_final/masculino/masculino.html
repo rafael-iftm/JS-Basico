@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masculino</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="characterContainer">
+        <div id="buttonsContainer">
+            <button onclick="changeCharacter('mario.gif', 'marioScore')">Mario</button>
+            <button onclick="changeCharacter('luigi.gif', 'luigiScore')">Luigi</button>
+        </div>
+
+        <div id="imageContainer">
+            <img id="characterImage" src="img/mario.gif" alt="Mario" onclick="incrementScore()">
+        </div>
+
+        <div id="scoreContainer">
+            <p id="marioScore">Pontuação Mario: 0</p>
+            <p id="luigiScore">Pontuação Luigi: 0</p>
+        </div>
+    </div>
+
+</body>
+</html>
